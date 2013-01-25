@@ -1,0 +1,4 @@
+* Library of miscellaneous small extensions to Common Lisp
+
+- http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/ext/library/0.html
+- Licence: GNU GPL
