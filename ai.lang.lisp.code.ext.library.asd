@@ -11,8 +11,7 @@
                (:file "interesting-ex")
                (:file "string-to-list")
                (:file "func_p")
-               (:file "more")
-               (:file "ai.lang.lisp.code.ext.library")))
+               (:file "more")))
 
 (defmethod perform ((o test-op) (c (eql (find-system :ai.lang.lisp.code.ext.library))))
   (load-system :ai.lang.lisp.code.ext.library)
