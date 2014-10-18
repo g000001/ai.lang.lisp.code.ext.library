@@ -1352,8 +1352,9 @@
     (return-from get-compiled-function-name nil))
   (etypecase fn 
     (symbol fn)
-    (compiled-function #-cmu20(kernel:%function-header-name fn)
-                       #+cmu20 (kernel:%function-name fn)
+    (compiled-function #+sbcl (sb-impl::%fun-name fn)
+                       #+(:and :cmu (not :cmu20)) (kernel:%function-header-name fn)
+                       #+(:and cmu cmu20) (kernel:%function-name fn)
                        #+:mcl(ccl::function-name fn)
                        #+lispm(si:compiled-function-name fn)
                        #+akcl(system::compiled-function-name fn)
